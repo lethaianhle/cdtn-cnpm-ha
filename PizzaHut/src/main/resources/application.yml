@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/pizzahut?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8
+    password: '123456'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        use_nationalized_character_data: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  servlet:
+    context-path: /PizzaHut
+  port: '8080'
+
+
+

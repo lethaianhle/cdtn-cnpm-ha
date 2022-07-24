@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Quản lý thành viên</title>
+    <link th:href="@{/admin/css/app.css}" rel="stylesheet">
+    <link th:href="@{/admin/css/font.css}" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+            <a class="sidebar-brand" th:href="@{/admin}">
+                <span class="align-middle">PizzaHut Dashboard</span>
+            </a>
+
+            <ul class="sidebar-nav">
+                <li class="sidebar-header">
+                    Admin Dashboard
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" th:href="@{/admin}">
+                        <i class="align-middle" data-feather="sliders"></i> <span
+                            class="align-middle">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item active">
+                    <a class="sidebar-link" th:href="@{/admin/thanhvien}">
+                        <i class="align-middle" data-feather="user"></i>
+                        <span class="align-middle">Quản lý thành viên</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+            <a class="sidebar-toggle js-sidebar-toggle">
+                <i class="hamburger align-self-center"></i>
+            </a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav navbar-align">
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="bell"></i>
+                                <span class="indicator">0</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown"
+                           data-bs-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="message-square"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+                           data-bs-toggle="dropdown">
+                            <i class="align-middle" data-feather="settings"></i>
+                        </a>
+
+                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                           data-bs-toggle="dropdown">
+                            <img th:src="@{/admin/img/avatars/avatar.jpg}" class="avatar img-fluid rounded me-1"
+                                 alt="Charles Hall" /> <span class="text-dark">Admin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href=""><i class="align-middle me-1"
+                                                                data-feather="user"></i> Profile</a>
+                            <a class="dropdown-item" th:href="@{/}"><i class="align-middle me-1"
+                                                                       data-feather="user"></i> Home</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href=""><i class="align-middle me-1"
+                                                                data-feather="settings"></i> Settings & Privacy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" th:href="@{/logout}">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid p-0">
+
+                <p class="h3 mb-3">
+                    <strong>Quản lý thành viên</strong>
+                </p>
+
+                <div class="row">
+                    <div class="">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Danh sách thành viên</h5>
+                                <br>
+                                <form th:action="@{/search}" method="POST">
+                                    <div class="form-group row">
+                                        <div class="col-xs-3">
+                                            <input name="search" class="form-control" type="text" placeholder="Tìm kiếm...">
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <a th:href="@{/admin/thanhvien/create}">
+                                    <button class="btn btn-primary btn-sm">Thêm mới thành viên</button>
+                                </a>
+                                <div th:if="${message != null}" class="text-center" style="color: red">
+                                    [[${message}]]
+                                </div>
+                            </div>
+                            <table class="table table-hover my-0">
+                                <thead>
+                                <tr>
+                                    <th>Họ Tên</th>
+                                    <th class="d-none d-xl-table-cell">Số Điện Thoại</th>
+                                    <th class="d-none d-xl-table-cell">Địa Chỉ</th>
+                                    <th>Điểm</th>
+                                    <th class="d-none d-md-table-cell">Rank</th>
+                                    <th class="d-none d-md-table-cell">Role</th>
+                                    <th class="d-none d-md-table-cell"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="user : ${listUserRes}">
+                                    <td>[[${user.hoTen}]]</td>
+                                    <td class="d-none d-xl-table-cell">[[${user.mobile}]]</td>
+                                    <td class="d-none d-xl-table-cell">[[${user.address}]]</td>
+                                    <td class="d-none d-md-table-cell">[[${user.point}]]</td>
+                                    <td th:if="${#strings.equals(user.rankName, 'Platinum')}"><span class="badge bg-success">[[${user.rankName}]]</span></td>
+                                    <td th:if="${#strings.equals(user.rankName, 'Gold')}"><span class="badge bg-warning">[[${user.rankName}]]</span></td>
+                                    <td th:if="${#strings.equals(user.rankName, 'Silver')}"><span class="badge bg-secondary">[[${user.rankName}]]</span></td>
+                                    <td class="d-none d-md-table-cell">[[${user.roleName}]]</td>
+                                    <td class="d-none d-md-table-cell">
+                                        <a th:href="@{'/admin/thanhvien/view/' + ${user.id}}"><button class="btn btn-primary btn-sm">View</button></a>
+                                        <a th:href="@{'/admin/thanhvien/delete/' + ${user.id}}"
+                                           class="link-delete" th:userId="${user.id}"
+                                           title="Delete this user"><button class="btn btn-danger btn-sm">Delete</button></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-start">
+                        <p class="mb-0">
+                            <a class="text-muted" href=""
+                               target="_blank"><strong>Nguyễn Hoàng Anh</strong></a> &copy;
+                        </p>
+                    </div>
+                    <div class="col-6 text-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="" target="_blank">Support</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="" target="_blank">Help Center</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="" target="_blank">Privacy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="" target="_blank">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script th:src="@{/admin/js/app.js}"></script>
+
+<script>
+    $("document").ready(function () {
+        $(".link-delete").on("click", function (e) {
+            e.preventDefault();
+            userId = $(this).attr("userId");
+            if (confirm("Bạn có muốn xóa user id: " + userId + "? Xác nhận sẽ không thể hoàn tác!")) {
+                window.location.href=$(this).attr("href");
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

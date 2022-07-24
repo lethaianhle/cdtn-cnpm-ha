@@ -1,0 +1,461 @@
+@media screen and (max-width: 1143px) {
+  .main {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 0;
+    width: 140px;
+  }
+
+  .header-menu {
+    width: 579px;
+  }
+
+  ul.sub__menu li {
+    margin: 0 8px;
+  }
+
+  ul.sub__menu li a {
+    font-size: 14px;
+  }
+
+  .cart-info-header {
+    width: 245px;
+    padding-left: 80px;
+  }
+
+  .cart-info-header a i {
+    font-size: 21px;
+  }
+
+  .img-welcome {
+    width: 482px;
+    padding-left: 60px;
+  }
+
+  .img-welcome img {
+    width: 380px;
+    height: 402px;
+  }
+
+  .welcome-content {
+    padding-right: 20px;
+    width: 482px;
+    padding-left: 40px;
+  }
+
+  .text-body {
+    font-size: 14px;
+  }
+
+  .post-img img {
+    width: 482px;
+    height: 286px;
+  }
+
+  .post-img {
+    width: 482px;
+  }
+
+  .box {
+    width: 316px;
+  }
+
+  .menu {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+
+  h3.menu-title {
+    padding-right: 100px;
+  }
+
+  ul.subnav__every__day {
+    padding-right: 130px;
+  }
+
+  .list-box {
+    width: 311px;
+  }
+
+  .list-box img {
+    width: 311px;
+  }
+
+  .list-product {
+    padding: 60px 0;
+  }
+
+  .band img {
+    width: 182px;
+  }
+
+  .band img:nth-child(6) {
+    display: none;
+  }
+
+  .why-box {
+    width: 320px;
+    margin: 0 10px;
+  }
+
+  .support-text h6::before {
+    left: 118px;
+  }
+
+  .blog-box {
+    width: 318px;
+    margin-right: 15px;
+  }
+
+  .footer-2 {
+    width: 150px;
+  }
+
+  .sub {
+    width: 100%;
+    padding: 45px 25px;
+  }
+
+  .sub-input {
+    width: 512px;
+    right: 200px;
+  }
+
+  .sub-input input {
+    width: 450px;
+  }
+
+  .footer {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 804px) {
+  .main {
+    width: 100%;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .welcome-content {
+    width: 354px;
+  }
+
+  .img-welcome {
+    width: 384px;
+    padding-left: 10px;
+  }
+
+  .icon-welcome a {
+    width: 80px;
+    height: 80px;
+  }
+
+  .post-img {
+    width: 354px;
+    height: 197px;
+  }
+
+  .post-img img {
+    width: 354px;
+    height: 197px;
+  }
+
+  .post {
+    height: 335px;
+  }
+
+  h3.menu-title {
+    padding-right: 350px;
+  }
+
+  ul.subnav__every__day {
+    padding-right: 430px;
+  }
+
+  .box {
+    width: 239px;
+    margin: 0 5px;
+  }
+
+  .pro-button a {
+    padding: 5px 5px;
+    font-size: 14px;
+  }
+
+  .menu {
+    height: 598px;
+  }
+
+  .list-box {
+    width: 226px;
+  }
+
+  .list-box img {
+    width: 226px;
+  }
+
+  .list-box-content {
+    width: 226px;
+    margin: 0;
+  }
+
+  .list-product {
+    padding: 120px 0;
+  }
+
+  .product-khuyenmai {
+    padding: 80px 10px;
+    height: 558px;
+  }
+
+  .band {
+    padding-left: 55px;
+  }
+
+  .band img {
+    width: 202px;
+    height: 202px;
+    padding: 10px;
+  }
+
+  .band img:nth-child(4) {
+    display: none;
+  }
+
+  .band img:nth-child(5) {
+    display: none;
+  }
+
+  .why-box {
+    width: 226px;
+  }
+
+  .support-text h6 {
+    font-size: 18px;
+  }
+
+  .why {
+    padding-left: 30px;
+  }
+
+  .blog-box {
+    width: 239px;
+    margin: 0 8px;
+  }
+
+  .sub {
+    width: 100%;
+    padding: 45px 25px;
+  }
+
+  .sub-input {
+    width: 354px;
+    right: 442px;
+  }
+
+  .sub-input input {
+    width: 354px;
+    right: 30px;
+  }
+
+  .sub-info {
+    width: 354px;
+  }
+
+  .footer {
+    padding-left: 5px;
+  }
+
+  .footer-1 {
+    width: 256px;
+  }
+
+  .footer-2 {
+    width: 128px;
+    padding: 0 10px;
+  }
+
+  .footer-3 {
+    width: 250px;
+  }
+
+  .footer-body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    width: 100%;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    padding: 15px 0;
+    width: 100px;
+    height: 60px;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .cart-info-header {
+    width: 185px;
+    padding-left: 29px;
+    height: 60px;
+  }
+
+  .welcome {
+    padding: 50px 0;
+    height: 835px;
+  }
+
+  .img-welcome {
+    float: none;
+  }
+
+  .welcome-content {
+    float: none;
+    height: 600px;
+  }
+
+  .post {
+    height: 530px;
+  }
+
+  .post-img {
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  h3.menu-title {
+    padding-right: 815px;
+  }
+
+  .box {
+    width: 165px;
+  }
+
+  .box img {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .info-product h3 a {
+    font-size: 14px;
+  }
+
+  .info-product {
+    padding: 20px;
+  }
+
+  .pro-button {
+    display: none;
+  }
+
+  .list-product {
+    padding: 50px 0;
+    height: 1720px;
+  }
+
+  .list-box {
+    float: none;
+    width: 345px;
+    margin-bottom: 12px;
+  }
+
+  .list-box img {
+    width: 100%;
+  }
+
+  .list-box-content {
+    width: 100%;
+  }
+
+  p.text-comment {
+    font-size: 14px;
+  }
+
+  .user-comment {
+    padding: 50px 0;
+    height: 550px;
+  }
+
+  .band {
+    padding-left: 5px;
+    padding-top: 30px;
+  }
+
+  .band img {
+    width: 167px;
+  }
+
+  .band img:nth-child(3) {
+    display: none;
+  }
+
+  .why {
+    padding: 50px 15px;
+    height: 720px;
+  }
+
+  .why-box {
+    float: none;
+    margin-bottom: 25px;
+    width: 345px;
+  }
+
+  .support-text h6 {
+    font-size: 20px;
+  }
+
+  .support-text h6::before {
+    display: none;
+  }
+
+  .blog-new {
+    padding: 30px 0;
+    height: 1350px;
+  }
+
+  .blog-box {
+    width: 345px;
+    float: none;
+    margin-left: 15px;
+  }
+
+  .sub-info {
+    width: 345px;
+    float: none;
+  }
+
+  .sub-input {
+    display: none;
+  }
+
+  .footer {
+    height: 850px;
+    padding-left: 15px;
+  }
+
+  .footer-1 {
+    width: 250px;
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  .footer-2 {
+    float: none;
+    width: 150px;
+  }
+}

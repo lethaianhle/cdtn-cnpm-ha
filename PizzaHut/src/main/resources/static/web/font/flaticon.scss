@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?fb121b81fd3d763b399d642d86563392") format("truetype"),
+url("./flaticon.woff?fb121b81fd3d763b399d642d86563392") format("woff"),
+url("./flaticon.woff2?fb121b81fd3d763b399d642d86563392") format("woff2"),
+url("./flaticon.eot?fb121b81fd3d763b399d642d86563392#iefix") format("embedded-opentype"),
+url("./flaticon.svg?fb121b81fd3d763b399d642d86563392#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "burger": "\f101",
+    "pizza-slice": "\f102",
+    "bread": "\f103",
+);
+
+.flaticon-burger:before {
+    content: map-get($flaticon-map, "burger");
+}
+.flaticon-pizza-slice:before {
+    content: map-get($flaticon-map, "pizza-slice");
+}
+.flaticon-bread:before {
+    content: map-get($flaticon-map, "bread");
+}

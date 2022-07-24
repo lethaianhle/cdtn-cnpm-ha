@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="https://www.pizzahut.com.au/img/icons/favicon-32x32.png">
+  <link rel="stylesheet" th:href="@{/web/assets/css/style.css}">
+  <link rel="stylesheet" th:href="@{/web/assets/css/responsisve.css}">
+  <link rel="stylesheet" th:href="@{web/font/flaticon.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <title>Pizza Hut</title>
+
+</head>
+<body>
+<div class="main">
+
+  <div class="header">
+    <div class="logo">
+      <a th:href="@{/}">
+        <svg data-v-5bac5986="" height="26" width="106" viewBox="0 0 106 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g data-v-5bac5986="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path data-v-5bac5986="" fill="#C8102E" d="M1.48895847,16.8501794 C1.51150195,17.2690471 1.53041555,17.5789441 1.59518028,17.8854 C1.62651189,18.0343265 1.52602148,18.3637235 1.12310458,18.2910765 C0.898816085,18.2505471 0.673381312,18.1627971 0.50277686,18.01865 C0.321664855,17.8668559 0.226714785,17.6494882 0.162714235,17.4282971 C0.0219130242,16.9220618 -0.286244849,15.4048853 0.65427667,15.4257235 C0.865382962,15.4305029 1.04534869,15.5218853 1.17487816,15.6834294 C1.42629525,16.0005912 1.46717918,16.4603706 1.48895847,16.8501794 Z M27.1505045,10.5153559 C27.3283687,11.4903559 27.3107924,14.6046206 26.9376788,16.1464588 C26.6807213,17.2063412 26.4466895,20.0202676 21.8510679,23.6245176 C20.9611736,24.3226941 19.9201617,25.1187529 18.8504928,25.2256206 C18.7173335,25.2376647 18.5839831,25.2491353 18.5182631,25.1493412 C18.4534983,25.0493559 18.6529508,24.7945176 18.707208,24.7633559 C21.493429,23.1050912 25.3668951,20.2982382 25.531195,13.6667088 C25.531195,13.6667088 25.917873,7.43225294 22.065804,4.49062059 C20.8270591,3.54487059 19.036381,2.47045882 17.6375391,2.08562059 C17.4342657,2.02884118 15.4936162,1.59620882 15.4412695,1.92388529 C15.3675255,2.38997353 16.1575025,2.42228235 16.5512492,2.43222353 C17.4810721,2.45841471 18.6187535,3.03156176 18.8762841,3.15850294 C22.2046948,4.79554706 23.0880934,6.71476765 23.3794392,7.18276765 C24.6722503,9.23791471 24.6210499,13.1797824 24.6271634,13.7475765 C24.670913,17.3078559 22.7988491,19.7436353 21.9632121,20.9000618 C20.5343759,22.8720471 17.3127602,25.3900324 12.0715927,25.8327971 C10.8464121,25.9358412 8.14979186,25.9023853 5.4829749,24.4465765 C4.63090787,23.9824 2.91741254,22.5959882 2.06209773,20.9987088 C1.81259111,20.5320471 1.33210936,19.3234294 1.89779781,19.2079588 C2.24187241,19.1372235 2.73706472,20.1821941 3.66421299,21.1849147 C4.50634561,22.0964441 5.36720077,22.9418265 6.61702644,23.5562676 C8.28352435,24.3746941 10.2960073,24.8369588 11.1299249,24.7033265 C11.3133295,24.6756059 11.3354909,24.4515471 11.1538057,24.4083412 C10.6377894,24.2880912 9.62447916,24.1982382 8.78846003,23.9015324 C7.475398,23.4364 5.06458324,21.9171206 3.66879811,20.1322971 C3.1489608,19.4670029 2.37006455,17.9242088 2.21913788,16.78365 C1.95759534,14.8003853 2.04604983,11.9839735 2.13717897,11.4351059 C2.67325522,8.24934118 4.38598636,6.40544412 5.68949608,5.25570882 C6.97733998,4.12604706 9.34497825,3.32310588 9.95518051,3.03213529 C10.0608292,2.98223824 10.0006496,2.85625294 9.93282808,2.84459118 C9.82183011,2.82681176 9.68408564,2.84841471 9.56429954,2.8769 C9.47928388,2.90060588 9.38376067,2.91972353 9.28479863,2.93826765 C9.0167605,2.99294412 1.41177572,4.71162059 1.33058099,13.9576794 C1.32313018,14.7887235 0.603458322,14.3153706 0.514048598,13.8053118 C0.269891276,12.4003559 0.305043817,11.1080029 0.623900289,9.76441471 C1.2125143,7.28772353 2.75043797,5.31917941 4.27479735,4.01784118 C6.50679266,2.11162059 9.61263428,1.00967941 12.2007401,0.557929412 C14.4031232,0.172135294 16.196667,-0.169879412 19.7955994,0.966091176 C26.2464728,3.00001765 27.1505045,10.5153559 27.1505045,10.5153559 Z M20.1353373,12.2985735 C20.0029421,12.2471471 19.8833471,12.2014559 19.7864865,12.1618824 C19.4364895,12.0194559 18.574106,11.7919559 17.8807985,11.6093824 C17.4966042,11.5080588 17.0988455,11.4032941 17.0243374,11.3727059 C16.948683,11.2595294 16.7818995,10.5345882 16.7007048,10.1826324 C16.6594387,10.0006324 16.6261967,9.85725 16.6078562,9.7955 C16.5448109,9.57392647 16.4659087,9.45023529 16.2509815,9.47317647 C16.2505994,9.47317647 16.2347426,9.47489706 16.2334052,9.47489706 C16.1573688,9.48579412 15.1299211,9.74694118 13.4468022,10.1759412 C12.3150432,10.4642353 11.145266,10.7620882 11.071522,10.7752794 C10.9769541,10.7884706 10.9223148,10.8397059 10.1871682,11.9919265 C9.96670061,12.3377647 9.69235795,12.7684853 9.64803518,12.81475 C9.62224392,12.8315735 9.46635004,12.9038382 9.30147698,12.9799265 C8.83379535,13.1969118 7.96376996,13.6010588 7.21811579,14.0285294 C6.39413258,14.5020735 4.80902045,15.509 4.69038062,15.7336324 C4.64586681,15.8167941 4.64472053,15.9030147 4.68636865,15.9699265 C4.74272734,16.0597794 4.86748065,16.1033676 5.02089093,16.0869265 C5.05375091,16.0838676 5.08813927,16.0773676 5.12290971,16.0683824 C5.28109615,16.0274706 10.2951094,15.0264706 13.1709311,14.5508235 C13.8896478,14.4324853 14.7971183,14.3152941 15.8673603,14.2023088 C18.5016994,13.9260588 21.154761,13.7752206 21.3085533,13.7912794 C21.4640651,13.8094412 21.6218695,13.7461618 21.7294286,13.6236176 C21.8178831,13.5240147 21.8644984,13.3972647 21.8608685,13.2665 C21.8524625,13.0087941 21.2980458,12.7493676 20.1353373,12.2985735 Z"></path><path data-v-5bac5986="" fill="#000" transform="translate(32.567427, 6.117647)" d="M57.1192302,10.7495662 C57.4654063,9.73786029 57.8946876,7.40091912 56.472347,7.04647794 C55.9872801,6.92622794 55.3195729,7.06540441 54.9638445,7.37874265 C54.9649907,7.91021324 55.5528406,7.79933088 55.55456,8.33022794 C55.1908076,9.40980147 53.6616721,11.4238456 54.97034,12.6251985 C56.1458487,13.7045809 58.0748444,12.406875 58.6674703,11.964875 C59.1194862,11.6293603 59.5086477,11.1741691 59.8773673,11.1139485 C60.0164491,12.4944338 60.546985,13.446875 61.7910793,13.6214191 C62.1594168,13.2191838 61.8443812,12.7622721 61.8478201,12.2460956 C61.8541246,11.4251838 62.135536,10.4761838 62.3179853,9.67075735 C62.5082675,8.82021324 62.9946717,7.88363971 62.3600155,7.09140441 C61.6200927,6.92699265 61.3073498,7.54755147 60.9800872,7.93984559 C59.9413679,9.18593382 58.8107552,10.1475515 57.1192302,10.7495662 M23.1175528,5.94013971 C22.1338548,5.58894853 20.471942,5.81530147 19.0077622,5.737875 C17.6966106,5.66790441 15.9871273,5.18900735 16.0711877,6.31790441 C16.1703408,7.65384559 18.8490026,7.51313971 20.2512834,7.38008088 C19.2643376,8.29409559 18.0958977,9.18000735 16.9803776,10.1087426 C16.0060409,10.9189485 14.2329391,11.8799926 14.7170507,13.7026691 C15.8106004,14.3232279 17.1078056,13.6992279 18.5511613,13.645125 C21.2699429,13.5445662 23.5907748,14.3580221 26.1813642,14.1324338 C27.193146,14.0433456 28.7795955,13.7051544 28.7001202,12.6024485 C28.1258346,12.2650221 27.6388573,12.6183162 27.08616,12.6768162 C24.4279402,12.9591838 21.9229395,11.474125 18.8994389,11.6696985 C19.6781441,10.8593015 20.7032992,10.0489044 21.595486,9.19663971 C22.4083885,8.41931618 23.6180944,7.43972794 23.1175528,5.94013971 M15.0471789,5.27866912 C14.648465,5.09571324 14.4790069,5.21863971 14.2933097,5.44575735 C13.0946845,6.89697794 10.36807,9.15706618 10.6141378,11.522875 C10.7033565,12.3694044 11.1893786,13.4434338 12.2787253,13.0832574 C12.5996832,12.7993603 12.4701538,12.4181544 12.6205073,12.0539632 C13.4922521,9.920625 16.0138738,8.42466912 15.0471789,5.27866912 M26.9363796,9.83822794 C27.7124102,9.13699265 28.345347,8.45411029 29.2268351,7.61981618 C29.8219447,7.05584559 31.4236779,6.08505147 30.9636381,4.88025735 C30.7127942,4.22681618 29.5747307,4.09108088 28.7656491,4.08993382 C27.608863,4.08897794 26.135322,4.447625 24.9538909,4.40613971 C24.5358814,4.39122794 24.1579916,4.051125 23.8376067,4.31188971 C22.7601049,6.56700735 26.16417,6.41769853 27.8341068,6.23340441 C26.6236366,7.54143382 24.4919407,8.34016912 23.4375555,9.81261029 C23.1616845,10.1959191 22.8141711,10.8063456 23.060812,11.4427721 C23.5114905,11.8021838 24.0246412,11.5549926 24.5181141,11.5381691 C26.7573691,11.4699191 29.3236957,12.2048015 30.9900025,11.4165809 C31.3306383,11.2550368 31.5423177,10.9598603 31.8711086,10.7336985 C33.9124396,11.3882868 35.3615267,10.2265074 36.5515548,9.56503676 C37.2729461,10.5350662 40.2131505,10.5987279 40.4553974,9.33600735 C39.9907725,8.54778676 38.7157287,8.99246324 38.4799774,8.11783088 C38.2341006,7.21318382 39.7810035,5.91375735 38.8148818,4.93913971 C38.437183,4.68047794 38.0243317,5.08080147 37.7904909,4.93072794 C34.8653791,4.564625 31.8176156,6.15750735 31.0767376,8.321625 C30.8782404,8.89458088 31.0201879,9.62602206 31.1392098,10.1276691 C29.8974081,10.6417426 28.291854,10.0223309 26.9363796,9.83822794 M33.6642703,8.68447794 C33.9793059,7.39155147 35.1431606,6.89506618 36.4743721,6.55591912 C36.8358319,6.57140441 36.3186693,6.94018382 36.3528666,7.15640441 C36.2665136,7.39269853 36.1404229,7.59094853 36.161247,7.92780147 C35.3357354,8.18761029 34.7585842,8.67797794 33.6642703,8.68447794 M68.6337889,2.494375 C67.5776843,2.21927206 67.1411432,3.02661029 66.5221528,3.76799265 C66.0231395,4.36465441 65.7188026,4.96590441 65.4329972,5.05002206 C64.728609,5.25859559 63.6245518,4.60018382 63.0229466,4.77453676 C62.8202463,4.83227206 62.489545,5.10699265 62.4817121,5.45799265 C62.4597417,6.37736029 63.5754528,6.517875 64.4729889,6.84822794 C64.0746571,7.71215441 63.5550109,8.76897794 63.2766562,9.93515441 C63.0214182,11.0109044 62.7338934,12.5890662 63.3337791,13.719875 C64.0670153,13.6000074 64.2401033,12.7284338 64.485789,12.1791838 C65.3340351,10.2867279 66.1303166,8.321625 67.18986,6.69624265 C68.8557848,6.58363971 70.5742473,6.11640441 71.8905572,5.78528676 C72.363206,5.66752206 73.0366446,5.715125 73.2062938,5.19283088 C72.8645118,4.78734559 72.1954672,4.92996324 71.6488834,4.92480147 C70.3522514,4.90721324 68.9528364,4.99955147 68.0719213,4.98253676 C68.3816076,4.32641912 69.2730302,3.52940441 68.6337889,2.494375 M18.7609302,0.662713235 C17.4620056,0.238875 15.3203753,1.25784559 14.6285962,2.26496324 C14.1846043,2.91171324 14.0306209,4.18169853 14.8897567,4.41761029 C15.969551,4.71355147 16.7858924,3.47396324 17.2449769,2.97327206 C17.9470725,2.20780147 18.5614778,1.67843382 18.7609302,0.662713235 M48.4575676,6.04203676 C48.9048073,5.16816912 49.2022666,4.37861029 49.68122,3.29961029 C49.8917531,2.82396324 51.0789155,0.652389706 49.9525059,0.378051471 C49.9347385,0.373080882 49.8837292,0.371742647 49.866535,0.377860294 C47.952632,0.915639706 46.5814918,4.584125 45.3931831,6.10550735 C43.9320601,6.07052206 42.1538,5.95352206 42.2281171,7.02793382 C42.2877236,7.90428676 43.5690719,8.07711029 44.310332,8.50515441 C44.0380908,9.35952206 42.4033066,12.7804338 43.7977544,13.6606103 C45.2590685,14.5830368 46.0215348,12.4344044 46.3522361,11.5303309 C46.7662337,10.3941691 47.0759199,9.38494853 47.5548733,8.52924265 C48.7080295,8.44627206 49.9803986,8.05225735 50.924168,8.03830147 C50.6716046,9.04063971 50.1139401,10.4375662 50.7168826,11.7325956 C51.7875067,12.4202574 52.5855076,11.6689338 52.9580481,10.9764926 C53.550292,9.87493382 53.6400838,7.91384559 54.0815921,7.02965441 C54.7703144,6.61575735 55.8489625,6.56872794 56.0167013,5.66790441 C55.6212352,5.28058088 55.0060657,5.67899265 54.480497,5.65700735 C54.6239729,4.935125 54.9854327,4.17213971 55.2355125,3.42750735 C55.4815803,2.69071324 55.9653098,1.78740441 55.3780331,1.02040441 C54.1830378,1.22247794 53.6742811,2.309125 53.1664798,3.15278676 C52.6067138,4.08305147"></path></g></svg>
+      </a>
+    </div>
+    <div class="header-menu">
+      <ul class="sub__menu">
+        <li><a th:href="@{/}">Trang chủ</a></li>
+        <li><a href="">Sản phẩm mới</a></li>
+        <li><a href="#">Product Views</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="cart-info-header">
+      <div class="cart">
+        <a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <div class="cart-box">
+          <div class="cart-title">
+            <p class="ttbold">Giỏ hàng</p>
+          </div>
+          <div class="icon-cart">
+            <svg width="81" height="70" viewBox="0 0 81 70"><g transform="translate(0 2)" stroke-width="4" stroke="#1e2d7d" fill="none" fill-rule="evenodd"><circle stroke-linecap="square" cx="34" cy="60" r="6"></circle><circle stroke-linecap="square" cx="67" cy="60" r="6"></circle><path d="M22.9360352 15h54.8070373l-4.3391876 30H30.3387146L19.6676025 0H.99560547"></path></g></svg>
+            <p>Hiện chưa có sản phẩm</p>
+          </div>
+          <div class="tongtien">
+            <span class="money">TỔNG TIỀN:</span>
+            <span class="gia">0₫</span>
+          </div>
+          <div class="button-thanhtoan">
+            <a href="#">Xem giỏ hàng</a>
+            <a href="#">Xem giỏ hàng</a>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <a th:href="@{/login}"><i class="fa fa-sign-in icon-search" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img th:src="@{/web/img/slideshow_1.jpg}" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img th:src="@{/web/img/slideshow_2.jpg}" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img th:src="@{/web/img/slideshow_3.jpg}" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img th:src="@{/web/img/slideshow_4.jpg}" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div class="welcome">
+    <div class="container">
+      <div class="img-welcome">
+        <a href="#">
+          <img th:src="@{/web/img/img_home_welcome.png}" alt="">
+        </a>
+      </div>
+      <div class="welcome-content">
+        <h3>Chào mừng đến với Pizza Hut</h3>
+        <div class="icon-welcome">
+          <a href="#">
+            <i class="flaticon-pizza-slice"></i>
+          </a>
+          <a href="#">
+            <i class="flaticon-burger"></i>
+          </a>
+          <a href="#">
+            <i class="flaticon-bread"></i>
+          </a>
+        </div>
+        <div class="text-body">
+          <p>Các đầu bếp của chúng tôi làm việc 24/7 và sẵn sàng tiếp nhận du khách vào bất kỳ thời điểm nào trong ngày và đêm</p>
+        </div>
+        <a href="#" class="btn">Đặt món ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="container">
+      <div class="post-img" >
+        <a href="#" class="post-active">
+          <img th:src="@{/web/img/img_home_banner_1.webp}" alt="">
+        </a>
+      </div>
+      <div class="post-img">
+        <a href="#" class="post-active">
+          <img th:src="@{/web/img/img_home_banner_2.webp}" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="container">
+      <h3 class="menu-title">Menu <span>trong ngày</span></h3>
+      <ul class="subnav__every__day">
+        <li class="item active" onclick="chuyenDoi('sanphamkhuyenmai', this)">Sản phẩm khuyến mãi</a></li>
+        <li class="item" onclick="chuyenDoi('sanphamnoibat', this)">Sản phẩm nổi bật</li>
+        <li class="item" onclick="chuyenDoi('tatcasanpham', this)">Tất cả sản phẩm</li>
+      </ul>
+      <div id="sanphamkhuyenmai" class="animation">
+        <div class="box">
+          <img th:src="@{/web/img/cheese-mania-360x240_fc82dd238ead43b8a74773c053dea5eb_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/cheese-chicken-bacon_a4ca087fea174ac892b4f5aa9662dcb5_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/./cheese-mania-360x240_fc82dd238ead43b8a74773c053dea5eb_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sanphamnoibat" class="animation">
+        <div class="box">
+          <img th:src="@{/web/img/1-nua-min_6d1669db5f0142da8d80e334c0fe8f63_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/extravaganzza_960eb178986d4825a2688f7ab21aed4b_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/meat-lover-full_29e9e4b5cde74186a6a68f710f878210_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tatcasanpham" class="animation">
+        <div class="box">
+          <img th:src="@{/web/img/./cheese-mania-360x240_fc82dd238ead43b8a74773c053dea5eb_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/cheese-chicken-bacon_a4ca087fea174ac892b4f5aa9662dcb5_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img th:src="@{/web/img/hawaii-full_195d4bc25f4b4d04a8ccc8defb9a4ff6_grande.png}" alt="">
+          <div class="info-product">
+            <h3>
+              <a href="#">Cheese Mania - pizza phô mai</a>
+            </h3>
+            <div class="price-product">
+              <span>59,000₫</span>
+            </div>
+            <div class="pro-button">
+              <a href="#">Đặt món<i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sale">
+    <div class="sale-center">
+      <h2>Giảm giá cho tất cả các đơn đặt hàng trên 1 triệu</h2>
+      <h3>Đăng ký thành viên để được giảm giá trong đơn hàng sau</h3>
+      <p>Chương trình kéo dài trong vòng 2 tháng</p>
+      <a href="#" class="btn-add">Xem thêm</a>
+    </div>
+  </div>
+
+  <div class="list-product">
+    <div class="container">
+      <h3 class="menu-title">Danh mục <span>Pizza</span></h3>
+      <div class="list-product-full">
+        <div class="list-box">
+          <img th:src="@{/web/img/img_item_category_home_1.jpg}" alt="">
+          <div class="list-box-content">
+            <h4>Pizza Gà</h4>
+            <ul class="list-box-menu">
+              <li><a href="#">Margherita</a></li>
+              <li><a href="#">Xúc xích gà</a></li>
+              <li><a href="#">Paneer</a></li>
+              <li><a href="#">Rau</a></li>
+              <li><a href="#">Gia vị</a></li>
+              <li><a href="#">Gà cay</a></li>
+              <li><a href="#">Gà Lebanon</a></li>
+              <li><a href="#">Soya Masala</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-box">
+          <img th:src="@{/web/img/img_item_category_home_2.jpg}" alt="">
+          <div class="list-box-content">
+            <h4>Pizza Gà</h4>
+            <ul class="list-box-menu">
+              <li><a href="#">Margherita</a></li>
+              <li><a href="#">Xúc xích gà</a></li>
+              <li><a href="#">Paneer</a></li>
+              <li><a href="#">Rau</a></li>
+              <li><a href="#">Gia vị</a></li>
+              <li><a href="#">Gà cay</a></li>
+              <li><a href="#">Gà Lebanon</a></li>
+              <li><a href="#">Soya Masala</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-box">
+          <img th:src="@{/web/img/img_item_category_home_3.jpg}" alt="">
+          <div class="list-box-content">
+            <h4>Pizza Gà</h4>
+            <ul class="list-box-menu">
+              <li><a href="#">Margherita</a></li>
+              <li><a href="#">Xúc xích gà</a></li>
+              <li><a href="#">Paneer</a></li>
+              <li><a href="#">Rau</a></li>
+              <li><a href="#">Gia vị</a></li>
+              <li><a href="#">Gà cay</a></li>
+              <li><a href="#">Gà Lebanon</a></li>
+              <li><a href="#">Soya Masala</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-comment">
+    <div class="swiper-container swipe">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h4 class="title-comment">Ý kiến khách hàng</h4>
+          <p class="text-comment">
+            Pellentesque posuere orci lobortis scelerisque blandit <br>. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. <br> Quisquemos sodales suscipit tortor ditaemcos <br> condimentum
+          </p>
+          <img class="img-feedback" th:src="@{/web/img/img_item_feedback_customer_4.png}" alt="">
+          <h4 class="user-name">Sebastian</h4>
+          <p class="job">Graphic designer</p>
+        </div>
+        <div class="swiper-slide">
+          <h4 class="title-comment">Ý kiến khách hàng</h4>
+          <p class="text-comment">
+            Pellentesque posuere orci lobortis scelerisque blandit <br>. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. <br> Quisquemos sodales suscipit tortor ditaemcos <br> condimentum
+          </p>
+          <img class="img-feedback" th:src="@{/web/img/img_item_feedback_customer_2.png}" alt="">
+          <h4 class="user-name">Sebastian</h4>
+          <p class="job">Graphic designer</p>
+        </div>
+        <div class="swiper-slide">
+          <h4 class="title-comment">Ý kiến khách hàng</h4>
+          <p class="text-comment">
+            Pellentesque posuere orci lobortis scelerisque blandit <br>. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. <br> Quisquemos sodales suscipit tortor ditaemcos <br> condimentum
+          </p>
+          <img class="img-feedback" th:src="@{/web/img/img_item_feedback_customer_3.png}" alt="">
+          <h4 class="user-name">Sebastian</h4>
+          <p class="job">Graphic designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="container">
+    <img th:src="@{/web/img/img_item_brands_1.png}" alt="">
+    <img th:src="@{/web/img/img_item_brands_2.png}" alt="">
+    <img th:src="@{/web/img/img_item_brands_3.png}" alt="">
+    <img th:src="@{/web/img/img_item_brands_4.png}" alt="">
+    <img th:src="@{/web/img/img_item_brands_5.png}" alt="">
+    <img th:src="@{/web/img/img_item_brands_6.png}" alt="">
+  </div>
+</div>
+
+<div class="why">
+  <div class="container">
+    <h3 class="menu-title">Tại sao chọn <span>Pizza Hut</span></h3>
+    <div class="why-box">
+      <img th:src="@{/web/img/img_item_support_home_1.png}" alt="">
+      <div class="support-text">
+        <h6>Giao hàng nhanh chóng</h6>
+        <p>Giao hàng từ 30-40 kể từ lúc đặt hàng</p>
+      </div>
+    </div>
+    <div class="why-box">
+      <img th:src="@{/web/img/img_item_support_home_2.png}" alt="">
+      <div class="support-text">
+        <h6>Sản phẩm chất lượng</h6>
+        <p>Đóng gói cẩn thận, gọn gàng khi đến tay khách hàng</p>
+      </div>
+    </div>
+    <div class="why-box">
+      <img th:src="@{/web/img/img_item_support_home_3.png}" alt="">
+      <div class="support-text">
+        <h6>Hỗ trợ 24/7</h6>
+        <p>Hỗ trợ và lắng nghe ý kiến khác hàng</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-new">
+  <div class="container">
+    <h3 class="menu-title">Tin tức <span> mới</span></h3>
+    <div class="blog-box">
+      <img th:src="@{/web/img/blog-10_394cfba0980e42d094c52c356b8bff38_large.jpg}" alt="">
+      <div class="content-blog">
+        <h4>
+          <a href="">Top 10 địa điểm bán Hamburger ngon...</a>
+        </h4>
+        <p>Bánh Hamburger là món ăn nhanh được ưa chuộng của người dân phương Tây</p>
+        <a href="#" class="btn">Xem thêm</a>
+      </div>
+    </div>
+    <div class="blog-box">
+      <img th:src="@{/web/img/blog-11_77e0f040b7af414786d5a47857cb3cc2_large.jpg}" alt="">
+      <div class="content-blog">
+        <h4>
+          <a href="">Nước trái cây và pizza gia vị</a>
+        </h4>
+        <p>Gợi ý những địa điểm có món bánh Pizza trái cây mới lạ và rất hiếm chỗ bán...</p>
+        <a href="#" class="btn">Xem thêm</a>
+      </div>
+    </div>
+    <div class="blog-box">
+      <img th:src="@{/web/img/blog-12_39a66ec1b9a2489990035b121745a10d_large.jpg}" alt="">
+      <div class="content-blog">
+        <h4>
+          <a href=""><a href="">Thưởng thức pizza cùng robot HutGirl</a></a>
+        </h4>
+        <p>Bánh Hamburger là món ăn nhanh được ưa chuộng của người dân phương Tây</p>
+        <a href="#" class="btn">Xem thêm</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sub">
+  <div class="container">
+    <div class="sub-info">
+      <h3>Đăng ký nhận tin</h3>
+      <p>Đăng ký email để nhận tin khuyến mãi mới nhất</p>
+    </div>
+    <div class="sub-input">
+      <input type="text" name="" id="" placeholder="Nhập email của bạn">
+      <button type="submit">Đăng ký</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="footer-1">
+      <h4 class="title-footer">Giới thiệu</h4>
+      <p>
+        Thứ 3 hàng tuần - Ưu đãi Mua 1 Tặng 1 - ÁP DỤNG cho các dòng bánh Pizza.
+      </p>
+      <img class="logo-bct" th:src="@{/web/img/logo_bct.png}" alt="">
+    </div>
+    <div class="footer-2">
+      <h4 class="title-footer">Giới thiệu</h4>
+      <ul class="list-footer">
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+      </ul>
+    </div>
+    <div class="footer-2">
+      <h4 class="title-footer">Giới thiệu</h4>
+      <ul class="list-footer">
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Tìm kiếm</a></li>
+      </ul>
+    </div>
+    <div class="footer-3">
+      <h4 class="title-footer">Giới thiệu</h4>
+      <div class="content-footer">
+        <div class="icon-footer">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="footer-body">
+          Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.
+        </div>
+      </div>
+      <div class="content-footer">
+        <div class="icon-footer">
+          <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+        </div>
+        <div class="footer-body">
+          1900.636.099
+        </div>
+      </div>
+      <div class="content-footer">
+        <div class="icon-footer">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <div class="footer-body">
+          1900.636.099
+        </div>
+      </div>
+      <div class="content-footer">
+        <div class="icon-footer">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </div>
+        <div class="footer-body">
+          hi@haravan.com
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+<script th:src="@{/web/js/app.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".cart").click(function(){
+      $(".cart-box").toggle(250);
+
+    });
+  });
+
+  $(document).ready(function(){
+    $(".search").click(function(){
+      $(".search-box").toggle(250);
+    });
+  });
+</script>
+</body>
+</html>
